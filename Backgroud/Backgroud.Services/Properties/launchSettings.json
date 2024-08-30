@@ -1,0 +1,16 @@
+﻿{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "Backgroud.Services": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development",
+        "SMTP_HOST": "smtp.example.com",
+        "SMTP_PORT": 587,
+        "SMTP_USERNAME": "username",
+        "SMTP_PASSWORD": "password"
+      }
+    }
+  }
+}

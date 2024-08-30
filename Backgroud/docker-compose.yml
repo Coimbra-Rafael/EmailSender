@@ -1,0 +1,26 @@
+﻿services:
+  backgroud.services:
+    image: backgroud.services
+    build:
+      context: .
+      dockerfile: Backgroud.Services/Dockerfile
+    environment:
+      - SMTP_HOST=${SMTP_HOST}
+      - SMTP_PORT=${SMTP_PORT}
+      - SMTP_USERNAME=${SMTP_USERNAME}
+      - SMTP_PASSWORD=${SMTP_PASSWORD}
+    depends_on:
+        - db
+  
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=rafael
+      - POSTGRES_PASSWORD=1qazzaq!
+      - POSTGRES_DB=EmailSendResume
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+
+volumes:
+  db-data:
